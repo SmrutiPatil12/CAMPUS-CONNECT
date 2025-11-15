@@ -1,70 +1,43 @@
 import React from "react";
-import "../styles/dashboard.css";
+import { useNavigate } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
+import "../styles/Dashboard.css";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="dashboard">
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <h2 className="logo">CampusConnect</h2>
-        <nav>
-          <ul>
-            <li>Dashboard</li>
-            <li>Announcements</li>
-            <li>Community</li>
-            <li>Events</li>
-            <li className="sidebar-section">Admin Tools</li>
-            <li>Analytics</li>
-            <li>Moderation</li>
-          </ul>
-        </nav>
-      </aside>
+    <div className="dashboard-container">
+      <Sidebar />
 
-      {/* Main Content */}
-      <main className="main">
-        <header className="header">
-          <h1>Welcome back!</h1>
-          <p>Here's what's happening on campus today.</p>
-        </header>
+      <div className="dashboard-content">
+        <h1 className="dashboard-title">Welcome Back 👋</h1>
 
-        <section className="grid">
+        <div className="dashboard-cards">
+
           {/* Announcements */}
-          <div className="card">
-            <h3>📢 Announcements</h3>
-            <ul>
-              <li>
-                <strong>Mid-term Exam Schedule</strong> <br />
-                <span>Posted 2 hours ago</span>
-              </li>
-              <li>
-                <strong>Library Hours Extended</strong> <br />
-                <span>Posted 1 day ago</span>
-              </li>
-            </ul>
-            <button>View All →</button>
+          <div className="dash-card">
+            <h2>Announcements</h2>
+            <p>Check the latest updates and notifications.</p>
+            <button onClick={() => navigate("/announcements")}>View All</button>
           </div>
 
           {/* Events */}
-          <div className="card">
-            <h3>📅 Upcoming Events</h3>
-            <ul>
-              <li>
-                <strong>Tech Fest 2024</strong> – Nov 15
-              </li>
-              <li>
-                <strong>Guest Lecture on AI</strong> – Nov 20
-              </li>
-            </ul>
-            <button>View Calendar →</button>
+          <div className="dash-card">
+            <h2>Events Calendar</h2>
+            <p>Explore upcoming important events.</p>
+            <button onClick={() => navigate("/events")}>View Calendar</button>
           </div>
 
-          {/* Discussions */}
-          <div className="card full">
-            <h3>💬 Hot Discussions</h3>
-            <p>Explore trending topics in the community forum.</p>
+          {/* Community */}
+          <div className="dash-card">
+            <h2>Community</h2>
+            <p>Join discussions & connect with others.</p>
+            <button onClick={() => navigate("/community")}>Explore</button>
           </div>
-        </section>
-      </main>
+
+        </div>
+      </div>
     </div>
   );
 };

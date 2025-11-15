@@ -1,0 +1,27 @@
+.announcement-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.announcement-card:hover {
+  transform: translateY(-3px);
+}
+
+.announcement-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.announcement-description {
+  color: #555;
+  font-size: 15px;
+}
+
+.announcement-date {
+  font-size: 13px;
+  color: #777;
+}

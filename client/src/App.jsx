@@ -2,6 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import Announcements from "./pages/Announcements";
+import Community from "./pages/Community";
+import Events from "./pages/Events";
 
 function App() {
   return (
@@ -9,8 +12,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/announcements" element={<Announcements />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
+
     </BrowserRouter>
   );
 }
