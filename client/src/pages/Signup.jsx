@@ -1,46 +1,128 @@
 import React, { useState } from "react";
 import "../styles/login.css";
 import { Link, useNavigate } from "react-router-dom";
+import API from "../api/api";
+import { useAuth } from "../context/AuthContext";
 
 const Signup = () => {
-  const [role, setRole] = useState("student");
-  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    role: "student",
+    department: "",
+    rollNo: "",
+    year: "",
+  });
 
-  const handleSignup = (e) => {
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const { login } = useAuth();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSignup = async (e) => {
     e.preventDefault();
-    navigate("/dashboard");  // redirect
+    setError("");
+
+    if (formData.password !== formData.confirmPassword) {
+      return setError("Passwords do not match");
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await API.post("/auth/signup", {
+        name: formData.name,
+        email: formData.email,
+        password: formData.password,
+        role: formData.role,
+      });
+
+      // Auto-login after signup
+      await login(formData.email, formData.password);
+      navigate("/dashboard");
+    } catch (err) {
+      setError(err.response?.data?.msg || "Signup failed");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="form-container">
       <p className="title">Create Account</p>
 
-      <form className="form" onSubmit={handleSignup}>
-        <input type="text" className="input" placeholder="Full Name" required />
-        <input type="email" className="input" placeholder="Email" required />
-        <input type="password" className="input" placeholder="Password" required />
-        <input type="password" className="input" placeholder="Confirm Password" required />
-        <input type="text" className="input" placeholder="Department / Branch" required />
+      {error && <p style={{ color: "red", fontSize: "14px" }}>{error}</p>}
 
-        <select className="input" onChange={(e) => setRole(e.target.value)} value={role}>
+      <form className="form" onSubmit={handleSignup}>
+        <input
+          type="text"
+          name="name"
+          className="input"
+          placeholder="Full Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          className="input"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          className="input"
+          placeholder="Password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="password"
+          name="confirmPassword"
+          className="input"
+          placeholder="Confirm Password"
+          value={formData.confirmPassword}
+          onChange={handleChange}
+          required
+        />
+
+        <select
+          name="role"
+          className="input"
+          value={formData.role}
+          onChange={handleChange}
+        >
           <option value="student">Student</option>
           <option value="faculty">Faculty</option>
           <option value="authority">Higher Authority</option>
         </select>
 
-        {role === "student" && (
-          <input type="text" className="input" placeholder="Roll No / PRN" required />
+        {formData.role === "student" && (
+          <input
+            type="text"
+            name="rollNo"
+            className="input"
+            placeholder="Roll No / PRN"
+            value={formData.rollNo}
+            onChange={handleChange}
+            required
+          />
         )}
 
-        <select className="input">
-          <option value="">Select Year</option>
-          <option value="1st">1st Year</option>
-          <option value="2nd">2nd Year</option>
-          <option value="3rd">3rd Year</option>
-          <option value="4th">Final Year</option>
-        </select>
-
-        <button className="form-btn">Sign Up</button>
+        <button className="form-btn" disabled={loading}>
+          {loading ? "Creating Account..." : "Sign Up"}
+        </button>
       </form>
 
       <p className="sign-up-label">
