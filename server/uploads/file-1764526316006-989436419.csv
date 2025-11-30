@@ -1,0 +1,222 @@
+categoryName,name,constantName
+grains,wheat,WHEAT
+grains,pearl millet,BAJRA
+grains,oats,OATS
+grains,rice,RICE
+grains,brown rice,BROWN_RICE
+grains,corn,CORN
+grains,barley,BARLEY
+grains,sorghum,SORGHUM
+grains,amaranth,AMARANTH
+grains,barnyard millet,SAMAK
+grains,ragi,RAGI
+fruits,stone apple,BAEL
+fruits,pineapple,PINEAPPLE
+fruits,custard apple,CUSTARD_APPLE
+fruits,star fruit,STAR_FRUIT
+fruits,papaya,PAPAYA
+fruits,watermelon,WATERMELON
+fruits,orange,ORANGE
+fruits,persimmon,PERSIMMON
+fruits,sweet lime,MOSAMBI
+fruits,muskmelon,MUSKMELON
+fruits,fig,FIG
+fruits,apple,APPLE
+fruits,mango,MANGO
+fruits,chiku,CHIKU
+fruits,mulberry,MULBERRY
+fruits,banana,BANANA
+fruits,olive,OLIVE
+fruits,amla,AMLA
+fruits,apricot,APRICOT
+fruits,cherry,CHERRY
+fruits,peach,PEACH
+fruits,guava,GUAVA
+fruits,pomegranate,POMEGRANATE
+fruits,pear,PEAR
+fruits,water chestnut,SINGHADA
+fruits,grapes,GRAPES
+fruits,jujube ripe - big,JUJUBE_RIPE_BIG
+fruits,jujube ripe - small,JUJUBE_RIPE_SMALL
+fruits,sugar cane,SUGAR_CANE
+fruits,falsa,FALSA
+fruits,jamun / java plum,JAMUN
+seedsAndNuts,raisins,RAISINS
+seedsAndNuts,manukka,MANUKKA
+seedsAndNuts,almond,ALMOND
+seedsAndNuts,poppy seeds,POPPY_SEEDS
+seedsAndNuts,dried apricots,DRIED_APRICOTS
+seedsAndNuts,pistachio,PISTACHIO
+seedsAndNuts,dates,DATES
+seedsAndNuts,cashew,CASHEW
+seedsAndNuts,pine nut,PINENUT
+seedsAndNuts,nutmeg,NUTMEG
+seedsAndNuts,walnut,WALNUT
+seedsAndNuts,sesame seeds,SESAME_SEEDS
+seedsAndNuts,fox nut,FOXNUT
+seedsAndNuts,safflower seeds,SAFFLOWER_SEEDS
+seedsAndNuts,flax seeds,FLAX_SEEDS
+seedsAndNuts,pumpkin seeds,PUMPKIN_SEEDS
+seedsAndNuts,coffee,COFFEE
+oils,mustard,MUSTARD_OIL
+oils,sesame,SESAME_OIL
+oils,coconut,COCONUT_OIL
+oils,groundnut,GROUNDNUT_OIL
+oils,soybean,SOYBEAN_OIL
+oils,olive,OLIVE_OIL
+oils,rice bran,RICE_BRAN_OIL
+oils,safflower,SAFFLOWER_OIL
+oils,flaxseed,FLAXSEED_OIL
+oils,corn,CORN_OIL
+oils,cottonseed,COTTONSEED_OIL
+oils,canola,CANOLA_OIL
+oils,almond,ALMOND_OIL
+oils,sandalwood,SANDALWOOD_OIL
+oils,garden cress,GARDEN_CRESS_OIL
+vegetables,ash gourd,ASH_GOURD
+vegetables,brinjal,BRINJAL
+vegetables,baby corn,BABY_CORN
+vegetables,beetroot,BEETROOT
+vegetables,bottle gourd,LAUKI
+vegetables,bitter gourd,KARELA
+vegetables,cabbage,CABBAGE
+vegetables,carrot,CARROT
+vegetables,capsicum,CAPSICUM
+vegetables,cauliflower,CAULIFLOWER
+vegetables,cluster beans,GUAR
+vegetables,coconut,COCONUT
+vegetables,corn,CORN
+vegetables,cucumber,CUCUMBER
+vegetables,drumstick,DRUMSTICK
+vegetables,french beans,FRENCH_BEANS
+vegetables,green chili,GREEN_CHILI
+fruits,jackfruit (ripe),JACKFRUIT_RIPE
+vegetables,key lime,KEY_LIME
+vegetables,lemon,LEMON
+vegetables,mushroom,MUSHROOM
+vegetables,onion,ONION
+vegetables,spring onion,SPRING_ONION
+vegetables,okra,OKRA
+vegetables,hyacinth beans,SEM
+vegetables,peas,PEAS
+vegetables,pumpkin,PUMPKIN
+vegetables,potato,POTATO
+vegetables,radish (unripe),RADISH
+vegetables,raw plantain,RAW_PLANTAIN
+vegetables,red chili,RED_CHILI
+vegetables,snake gourd,SNAKE_GOURD
+vegetables,sweet potato,SWEET_POTATO
+vegetables,tomato,TOMATO
+vegetables,taro root,TARO_ROOT
+vegetables,elephant yam,JIMIKAND
+vegetables,spine gourd,KAKODA
+vegetables,apple gourd,TINDA
+vegetables,ridge gourd,TORAI
+vegetables,lotus root,LOTUS_ROOT
+vegetables,long melon,KAKDI
+vegetables,wild melon,KACHRI
+vegetables,pointed gourd,PARWAL
+vegetables,coccinia,KUNDRU
+vegetables,raw mango,RAW_MANGO
+spicesAndHerbs,black pepper,BLACK_PEPPER
+spicesAndHerbs,cloves,CLOVES
+spicesAndHerbs,fennel seeds,FENNEL_SEEDS
+spicesAndHerbs,cardamom,CARDAMOM
+spicesAndHerbs,turmeric,TURMERIC
+spicesAndHerbs,saffron,SAFFRON
+spicesAndHerbs,cumin,CUMIN
+spicesAndHerbs,asafoetida,ASAFOETIDA
+spicesAndHerbs,cinnamon,CINNAMON
+spicesAndHerbs,coriander seeds,CORIANDER_SEEDS
+spicesAndHerbs,mustard seeds,MUSTARD_SEEDS
+spicesAndHerbs,carom seeds,CAROM_SEEDS
+spicesAndHerbs,bay leaves,BAY_LEAVES
+spicesAndHerbs,black stone flower,BLACK_STONE_FLOWER
+spicesAndHerbs,fenugreek seeds,FENUGREEK_SEEDS
+spicesAndHerbs,kapok buds,KAPOK_BUDS
+spicesAndHerbs,nigella seeds,NIGELLA_SEEDS
+spicesAndHerbs,nutmeg & mace,NUTMEG_AND_MACE
+spicesAndHerbs,poppy seeds,POPPY_SEEDS
+spicesAndHerbs,star anise,STAR_ANISE
+spicesAndHerbs,ginger(fresh),GINGER_FRESH
+spicesAndHerbs,ginger(dried),GINGER_DRIED
+spicesAndHerbs,mint,MINT
+spicesAndHerbs,dill,DILL
+spicesAndHerbs,basil,BASIL
+spicesAndHerbs,cilantro,CILANTRO
+spicesAndHerbs,fennel leaves,FENNEL_LEAVES
+spicesAndHerbs,peppermint,PEPPERMINT
+spicesAndHerbs,lemongrass,LEMONGRASS
+spicesAndHerbs,oregano,OREGANO
+spicesAndHerbs,spearmint,SPEARMINT
+spicesAndHerbs,curry leaves,CURRY_LEAVES
+spicesAndHerbs,aloe vera,ALOE_VERA
+spicesAndHerbs,hibiscus,HIBISCUS
+spicesAndHerbs,marshmellow,MARSHMELLOW
+spicesAndHerbs,garlic,GARLIC
+spicesAndHerbs,giloy (guduchi),GILOY
+spicesAndHerbs,ashwagandha,ASHWAGANDHA
+spicesAndHerbs,guggal,GUGGAL
+spicesAndHerbs,shatavari,SHATAVARI
+spicesAndHerbs,harada,HARADA
+spicesAndHerbs,baheda,BAHEDA
+spicesAndHerbs,safed chandan (heart wood),HEART_WOOD
+spicesAndHerbs,jatamansi (rhizome),JATAMANSI
+spicesAndHerbs,camphor,CAMPHOR
+spicesAndHerbs,brahmi,BRAHMI
+spicesAndHerbs,kewda,KEWDA
+spicesAndHerbs,honey,HONEY
+spicesAndHerbs,jaggery (1 year old),JAGGERY
+spicesAndHerbs,mishri,MISHRI
+spicesAndHerbs,rock salt,ROCK_SALT
+spicesAndHerbs,sea salt,SEA_SALT
+spicesAndHerbs,khand,KHAND
+spicesAndHerbs,tamarind,TAMARIND
+legumes,green gram,MOONG
+legumes,black eyed beans,LOBIA
+legumes,red lentils,LAL_MASOOR
+legumes,black lentils,KALA_MASOOR
+legumes,yellow pigeon peas,TOOR
+legumes,adzuki beans,CHAURI
+legumes,turkish gram,MOTH
+legumes,kidney beans,RAJMA
+legumes,white and green peas,VATANA
+legumes,bengal gram,CHANA
+legumes,white chickpea,KABULI_CHANA
+legumes,black gram,URAD
+legumes,black beans,KALA_SEM
+leafyVegetables,amaranth leaves (green or red),CHOLAI
+leafyVegetables,fenugreek,METHI_LEAVES
+leafyVegetables,spinach,SPINACH
+leafyVegetables,radish leaves,MOOLI_PATTA
+leafyVegetables,mustard leaves,MUSTARD_LEAVES
+leafyVegetables,chenopodium,BATHUA
+leafyVegetables,taro leaves,ARBI_PATTA
+leafyVegetables,turmeric leaves,HALDI_PATTA
+leafyVegetables,drumstick leaves,MORINGA_LEAVES
+leafyVegetables,purslane,KULFA
+leafyVegetables,water spinach,WATER_SPINACH
+dairy,cow milk,COW_MILK
+dairy,buffalo milk,BUFFALO_MILK
+dairy,goat milk,GOAT_MILK
+dairy,cow curd,COW_CURD
+dairy,buffalo curd,BUFFALO_CURD
+dairy,cottage cheese,COTTAGE_CHEESE
+dairy,butter milk,BUTTERMILK
+dairy,butter,BUTTER
+dairy,cow ghee,COW_GHEE
+dairy,buffalo ghee,BUFFALO_GHEE
+dairy,cheese,CHEESE
+dairy,frozen yogurt,FROZEN_YOGURT
+dairy,shreekhand (cow milk),SHREEKHAND
+nonVeg,chicken,CHICKEN
+nonVeg,mutton,MUTTON
+nonVeg,lamb,LAMB
+nonVeg,pork,PORK
+nonVeg,beef,BEEF
+nonVeg,fish,FISH
+nonVeg,eggs,EGGS
+nonVeg,duck,DUCK
+nonVeg,crab,CRAB
+nonVeg,rabbit,RABBIT
+vegetables,jackfruit (raw),JACKFRUIT_RAW
