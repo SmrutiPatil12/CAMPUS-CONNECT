@@ -1,0 +1,179 @@
+/* src/styles/files.css */
+
+.files-page {
+  display: flex;
+  min-height: 100vh;
+  background: #F6F8FC;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.files-content {
+  flex: 1;
+  padding: 2.5rem;
+  margin-left: 280px; /* Adjust if your Sidebar width changes */
+}
+
+.files-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Upload Box - Modern Card Style */
+.upload-box {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.upload-label {
+  display: block;
+  width: 100%;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px dashed #4facfe;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4facfe;
+}
+
+.upload-label:hover {
+  background: #f0f8ff;
+  border-color: #00f2fe;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(79, 172, 254, 0.2);
+}
+
+.upload-label input {
+  display: none;
+}
+
+/* Files Grid */
+.files-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.8rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* File Card - Glassmorphism Style */
+.file-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.file-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.file-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(79, 172, 254, 0.25);
+}
+
+.file-card h4 {
+  margin: 0 0 0.8rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.file-card h4 a {
+  color: #4facfe;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.file-card h4 a:hover {
+  color: #00f2fe;
+  text-decoration: underline;
+}
+
+.file-card p {
+  margin: 0.5rem 0;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.file-date {
+  display: block;
+  margin-top: 0.8rem;
+  color: #95a5a6;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* DELETE BUTTON - Beautiful & Professional */
+.file-card button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  width: 100%;
+}
+
+.file-card button:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+}
+
+.file-card button:active {
+  transform: translateY(-1px);
+}
+
+/* Empty State */
+.files-grid p {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #95a5a6;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .files-content {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+  
+  .files-title {
+    font-size: 1.8rem;
+  }
+  
+  .files-grid {
+    grid-template-columns: 1fr;
+  }
+}

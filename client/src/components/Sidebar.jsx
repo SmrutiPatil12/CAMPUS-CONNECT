@@ -1,35 +1,65 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../styles/sidebar.css";
 
 export default function Sidebar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // If you add token later:
-    // localStorage.removeItem("token");
-    navigate("/");  // redirect to login page
+    navigate("/");
   };
 
   return (
-    <div className="sidebar">
-      <h2 className="logo">Campus Connect</h2>
+    <div className="sidebar-light">
+      <h2 className="sidebar-logo">Campus Connect</h2>
 
       <ul className="sidebar-menu">
 
-        <li><Link to="/dashboard" className="sidebar-link">🏠 Dashboard</Link></li>
+        <li>
+          <NavLink to="/dashboard" className="sidebar-item">
+            <span>🏠</span> Dashboard
+          </NavLink>
+        </li>
 
-        <li><Link to="/announcements" className="sidebar-link">📢 Announcements</Link></li>
+        <li>
+          <NavLink to="/announcements" className="sidebar-item">
+            <span>📢</span> Announcements
+          </NavLink>
+        </li>
 
-        <li><Link to="/community" className="sidebar-link">👥 Community</Link></li>
+        <li>
+          <NavLink to="/community" className="sidebar-item">
+            <span>👥</span> Community
+          </NavLink>
+        </li>
 
-        <li><Link to="/events" className="sidebar-link">📅 Events</Link></li>
+        <li>
+          <NavLink to="/events" className="sidebar-item">
+            <span>📅</span> Events
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/files" className="sidebar-item">
+            <span>📂</span> Files & Notes
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/notifications" className="sidebar-item">
+            <span>🔔</span> Notifications
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/profile" className="sidebar-item">
+            <span>👤</span> Profile
+          </NavLink>
+        </li>
 
       </ul>
 
-      <button className="logout-btn" onClick={handleLogout}>
-        🚪 Logout
-      </button>
+      <button className="logout-button" onClick={handleLogout}>🚪 Logout</button>
     </div>
   );
 }

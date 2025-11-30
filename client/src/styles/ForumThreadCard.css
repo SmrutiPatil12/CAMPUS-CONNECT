@@ -1,0 +1,21 @@
+.thread-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.thread-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #0a66c2;
+}
+
+.thread-card p {
+  font-size: 14px;
+}
+
+.thread-card .replies {
+  margin-top: 10px;
+  font-weight: 600;
+}

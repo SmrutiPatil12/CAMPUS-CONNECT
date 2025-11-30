@@ -1,27 +1,49 @@
-.announcement-card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  transition: 0.2s;
+:root {
+  --primary: #4F46E5;
+  --text-dark: #1E293B;
+  --text-gray: #64748B;
+  --white: #ffffff;
 }
 
-.announcement-card:hover {
-  transform: translateY(-3px);
+/* Glassmorphism Card */
+.announcement-card-glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  transition: all 0.3s ease;
 }
 
-.announcement-header {
+.announcement-card-glass:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Header */
+.announcement-card-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
-.announcement-description {
-  color: #555;
+.announcement-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.announcement-card-date {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+/* Description */
+.announcement-card-description {
   font-size: 15px;
-}
-
-.announcement-date {
-  font-size: 13px;
-  color: #777;
+  color: var(--text-gray);
+  line-height: 1.5;
+  margin-top: 5px;
 }
