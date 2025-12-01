@@ -1,6 +1,6 @@
-// src/context/AuthContext.jsx
+// client/src/context/AuthContext.jsx
 import React, { createContext, useContext, useState, useEffect } from "react";
-import API from "../api/api";
+import axios from "axios";
 
 const AuthContext = createContext();
 
@@ -12,45 +12,27 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-
-    // THIS LINE IS CRITICAL — adds token to ALL requests
     if (token) {
-      API.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+      setUser({ token });
     }
-
-    const loadUser = async () => {
-      if (!token) {
-        setLoading(false);
-        return;
-      }
-
-      try {
-        const res = await API.get("/api/auth/me");
-        setUser(res.data);
-      } catch (err) {
-        console.log("Token invalid or expired");
-        localStorage.removeItem("token");
-        delete API.defaults.headers.common["Authorization"];
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadUser();
+    setLoading(false);
   }, []);
 
   const login = async (email, password) => {
-    const res = await API.post("/api/auth/login", { email, password });
+    const res = await axios.post("http://localhost:3200/api/auth/login", {
+      email,
+      password,
+    });
     const { token, user } = res.data;
-
     localStorage.setItem("token", token);
-    API.defaults.headers.common["Authorization"] = `Bearer ${token}`; // THIS LINE FIXES EVERYTHING
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
     setUser(user);
   };
 
   const logout = () => {
     localStorage.removeItem("token");
-    delete API.defaults.headers.common["Authorization"];
+    delete axios.defaults.headers.common["Authorization"];
     setUser(null);
   };
 
