@@ -7,6 +7,7 @@ import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import authRoutes from "./routes/authRoutes.js";
 import announcementRoutes from "./routes/announcementRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
 import fileRoutes from "./routes/fileRoutes.js";
@@ -37,6 +38,7 @@ app.get("/", (req, res) => {
 });
 
 // ALL API ROUTES WITH CONSISTENT /api PREFIX
+app.use("/api/auth", authRoutes);
 app.use("/api/announcements", announcementRoutes);
 app.use("/api/events", eventRoutes); 
 app.use("/api/files",fileRoutes);      

@@ -18,7 +18,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   // Replace with real user when auth is added
-  const user = { name: "John Doe", role: "Student", avatar: "https://i.pravatar.cc/100?img=12" };
+  const user = { name: "Smruti", role: "faculty", avatar: "https://i.pravatar.cc/100?img=12" };
   const USER_ID = "66f8a1b2c3d4e5f607182930";
 
   useEffect(() => {
